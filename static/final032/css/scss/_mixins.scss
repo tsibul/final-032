@@ -17,31 +17,31 @@
 
 @mixin roundAll(){
   border: 1px solid transparent;
-  border-radius: 60px;
-  object-fit: cover;
+  border-radius: 70px;
+  object-fit: fill;
 }
 
 @mixin roundLT(){
   border: 1px solid transparent;
-  border-radius: 60px 0 0 0;
-  object-fit: cover;
+  border-radius: 70px 0 0 0;
+  object-fit: fill;
 }
 
 @mixin roundRT(){
   border: 1px solid transparent;
-  border-radius:  0 60px  0 0;
-  object-fit: cover;
+  border-radius:  0 70px  0 0;
+  object-fit: fill;
 }
 
 @mixin roundRB(){
   border: 1px solid transparent;
-  border-radius: 0 0 60px 0;
-  object-fit: cover;
+  border-radius: 0 0 70px 0;
+  object-fit: fill;
 }
 
 @mixin roundLB(){
   border: 1px solid transparent;
-  border-radius: 0 0 0 60px;
-  object-fit: cover;
+  border-radius: 0 0 0 70px;
+  object-fit: fill;
 }
 

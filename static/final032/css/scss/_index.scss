@@ -64,5 +64,52 @@
     }
   }
 
+  &__projects{
+    margin-top: 93px;
+    display: grid;
+    grid-template-columns: repeat(2, 525px);
+    justify-content: space-between;
+    gap: 56px;
+    &_item{
+      width: 572px;    }
+    &_item-footer{
+      width: 100%;
+      margin-top: 24px;
+      display: flex;
+      justify-content: space-between;
+    }
+    &_item-info{
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+    }
+    &_item-title{
+      @include title();
+      font-size: 25px;
+      line-height: 31.25px;
+    }
+    &_item-text{
+      @include text();
+      font-size: 22px;
+      line-height: 30px;
+    }
+    &_lt{
+      height: 548px;
+      @include roundRT;
+    }
+    &_rt{
+      height: 548px;
+      @include roundLT;
+    }
+    &_lb{
+      height: 548px;
+      @include roundRB;
+    }
+    &_rb{
+      height: 548px;
+      @include roundLB;
+    }
+  }
+
 }
 
