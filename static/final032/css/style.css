@@ -46,4 +46,48 @@
   color: #CDA274;
 }
 
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 44px;
+  align-items: center;
+  height: 50px;
+}
+.menu__left {
+  display: flex;
+  justify-content: start;
+  gap: 10px;
+  align-items: center;
+}
+.menu__right {
+  display: flex;
+  justify-content: space-between;
+  width: 243px;
+}
+.menu__title {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #292F36;
+  font-size: 40px;
+  line-height: 50px;
+}
+.menu__title:hover {
+  color: #CDA274;
+}
+.menu__item {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #4D5053;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  height: 100%;
+}
+.menu__item:hover {
+  color: #CDA274;
+}
+
 /*# sourceMappingURL=style.css.map */
