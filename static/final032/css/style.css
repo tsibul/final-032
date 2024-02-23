@@ -33,7 +33,7 @@
 }
 .btn:hover {
   color: #292F36;
-  background-color: #fff;
+  background-color: transparent;
 }
 .btn__color {
   background-color: #CDA274;
@@ -88,6 +88,59 @@
 }
 .menu__item:hover {
   color: #CDA274;
+}
+
+.footer {
+  margin-top: 96px;
+  height: 406px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 393px;
+  gap: 26px;
+}
+.footer__middle {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  align-items: start;
+  width: 122px;
+}
+.footer__right {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  align-items: start;
+  width: 256px;
+}
+.footer__text {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #4D5053;
+  font-size: 22px;
+  line-height: 33px;
+}
+.footer__text:hover {
+  color: #CDA274;
+}
+.footer__title {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #292F36;
+  font-size: 25px;
+  line-height: 31.25px;
+}
+.footer__social {
+  display: flex;
+  gap: 54px;
+  justify-content: start;
 }
 
 .banner {
