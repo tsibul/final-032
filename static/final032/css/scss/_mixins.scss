@@ -14,3 +14,34 @@
   font-style: normal;
   color: $colorNeutral
 }
+
+@mixin roundAll(){
+  border: 1px solid transparent;
+  border-radius: 60px;
+  object-fit: cover;
+}
+
+@mixin roundLT(){
+  border: 1px solid transparent;
+  border-radius: 60px 0 0 0;
+  object-fit: cover;
+}
+
+@mixin roundRT(){
+  border: 1px solid transparent;
+  border-radius:  0 60px  0 0;
+  object-fit: cover;
+}
+
+@mixin roundRB(){
+  border: 1px solid transparent;
+  border-radius: 0 0 60px 0;
+  object-fit: cover;
+}
+
+@mixin roundLB(){
+  border: 1px solid transparent;
+  border-radius: 0 0 0 60px;
+  object-fit: cover;
+}
+

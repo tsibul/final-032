@@ -129,9 +129,38 @@
 }
 
 .banner-image {
-  border: 2px solid transparent;
-  border-radius: 30px;
+  border: 1px solid transparent;
+  border-radius: 60px;
   object-fit: cover;
+}
+
+.projects {
+  margin-top: 96px;
+}
+.projects__top {
+  width: 737px;
+  height: 137px;
+  margin: 0 auto;
+}
+.projects__top_title {
+  padding: 8px 0;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #292F36;
+  font-size: 50px;
+  line-height: 62.5px;
+  text-align: center;
+}
+.projects__top_text {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #4D5053;
+  font-size: 22px;
+  line-height: 33px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

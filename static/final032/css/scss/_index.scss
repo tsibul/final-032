@@ -37,8 +37,32 @@
 }
 
 .banner-image {
-  border: 2px solid transparent;
-  border-radius: 30px;
-  object-fit: cover;
+  @include roundAll();
+}
+
+.projects {
+  margin-top: 96px;
+
+  &__top {
+    width: 737px;
+    height: 137px;
+    margin: 0 auto;
+
+    &_title {
+      padding: 8px 0;
+      @include title();
+      font-size: 50px;
+      line-height: 62.5px;
+      text-align: center;
+    }
+
+    &_text{
+      @include text();
+      font-size: 22px;
+      line-height: 33px;
+      text-align: center;
+    }
+  }
+
 }
 
