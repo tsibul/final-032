@@ -56,7 +56,7 @@
       text-align: center;
     }
 
-    &_text{
+    &_text {
       @include text();
       font-size: 22px;
       line-height: 33px;
@@ -64,83 +64,152 @@
     }
   }
 
-  &__projects{
+  &__projects {
     margin-top: 93px;
     display: grid;
     grid-template-columns: repeat(2, 525px);
     justify-content: space-between;
     gap: 56px;
-    &_item{
-      width: 572px;    }
-    &_item-footer{
+
+    &_item {
+      width: 525px;
+    }
+
+    &_item-footer {
       width: 100%;
       margin-top: 24px;
       display: flex;
       justify-content: space-between;
     }
-    &_item-info{
+
+    &_item-info {
       display: flex;
       align-items: start;
       flex-direction: column;
     }
-    &_item-title{
+
+    &_item-title {
       @include title();
       font-size: 25px;
       line-height: 31.25px;
     }
-    &_item-text{
+
+    &_item-text {
       @include text();
       font-size: 22px;
       line-height: 30px;
     }
-    &_lt{
-      height: 548px;
+
+    &_lt {
+      width: 525px;
       @include roundRT;
     }
-    &_rt{
-      height: 548px;
+
+    &_rt {
+      width: 525px;
       @include roundLT;
     }
-    &_lb{
-      height: 548px;
+
+    &_lb {
+      width: 525px;
       @include roundRB;
     }
-    &_rb{
-      height: 548px;
+
+    &_rb {
+      width: 525px;
       @include roundLB;
     }
   }
 }
 
-.counter{
+.counter {
   margin-top: 96px;
   width: 100wv;
   background-color: #F4F0EC;
   height: 457px;
   display: flex;
   align-items: center;
-  &__block{
+
+  &__block {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    &_item{
+
+    &_item {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-    &_item-title{
+
+    &_item-title {
       @include title();
       padding: 16px 0 22px 0;
       font-size: 85px;
       line-height: 106.25px;
       color: $colorPrimary;
     }
-    &_item-text{
+
+    &_item-text {
       @include text();
       font-size: 22px;
       line-height: 33px;
+    }
+  }
+}
+
+.news {
+  margin-top: 96px;
+
+  &__articles {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 382px);
+    justify-content: space-between;
+
+    &_item {
+      padding: 21px;
+      border: 1px solid #F4F0EC;
+      border-radius: 60px;
+      height: 521px;
+    }
+
+    &_img {
+      border: 1px solid transparent;
+      border-radius: 55px 55px 0 0;
+      height: 289px;
+    }
+
+    &_title {
+      margin-top: 6px;
+      @include title;
+      width: 80%;
+      font-size: 25px;
+      line-height: 31.25px;
+      text-align: start;
+    }
+
+    &_bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &_text {
+      margin-top: 30px;
+      @include text;
+      font-size: 16px;
+      line-height: 24px;
+      height: 52px;
+    }
+    &_dark-bg{
+      background-color: #F4F0EC;
+    }
+
+    &_svg{
+      height: 51px;
+      width: 50px;
     }
   }
 }
