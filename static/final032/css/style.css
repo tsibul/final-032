@@ -225,4 +225,44 @@
   object-fit: fill;
 }
 
+.counter {
+  margin-top: 96px;
+  width: 100wv;
+  background-color: #F4F0EC;
+  height: 457px;
+  display: flex;
+  align-items: center;
+}
+.counter__block {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.counter__block_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.counter__block_item-title {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #292F36;
+  padding: 16px 0 22px 0;
+  font-size: 85px;
+  line-height: 106.25px;
+  color: #CDA274;
+}
+.counter__block_item-text {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #4D5053;
+  font-size: 22px;
+  line-height: 33px;
+}
+
 /*# sourceMappingURL=style.css.map */
