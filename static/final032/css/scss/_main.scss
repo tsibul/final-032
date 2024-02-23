@@ -6,6 +6,56 @@
   box-sizing: border-box;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.btn {
+  padding: 25px 77px 25px 53px;
+  color: #fff;
+  background-color: $colorSecondary;
+  font-family: Jost, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22.5px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  position: relative;
+  border: 1px solid $colorSecondary;
+  border-radius: 18px;
+  transition: background-color 0.2s, color 0.2s;
+
+  &:after {
+    content: url("../icon/rightOrange.png");
+    position: absolute;
+    top: calc(50%);
+    right: 53px;
+    transform: translateY(-50%);
+
+  }
+
+  &:hover {
+    color: $colorSecondary;
+    background-color: #fff;
+  }
+
+  &__color {
+    background-color: $colorPrimary;
+    border-color: $colorPrimary;
+
+    &:after {
+      content: url("../icon/rightBlack.png");
+    }
+
+    &:hover {
+      color: $colorPrimary;
+    }
+  }
+}
+
+
 //// <uniquifier>: Use a uniquifier for the class name
 //// <weight>: Use a value from 100 to 900
 //
@@ -27,35 +77,4 @@
 //  font-weight: 400;
 //  font-style: italic;
 //}
-
-.btn{
-  padding: 25px 77px 25px 53px;
-  color: #fff;
-  background-color: $colorSecondary;
-  font-family: Jost, sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 23px;
-  letter-spacing: 0.02em;
-  text-align: center;
-  position: relative;
-  border: 1px solid $colorSecondary;
-  border-radius: 18px;
-  transition: background-color 0.2s, color 0.2s;
-
-  &:after{
-    content: url("../icon/rightOrange.png");
-    position: absolute;
-    top: calc(50%);
-    right: 53px;
-    transform: translateY(-50%);
-
-  }
-
-  &:hover{
-    color: $colorSecondary;
-    background-color: #fff;
-  }
-}
-
 

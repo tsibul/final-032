@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .btn {
   padding: 25px 77px 25px 53px;
   color: #fff;
@@ -11,7 +16,7 @@
   font-family: Jost, sans-serif;
   font-size: 18px;
   font-weight: 600;
-  line-height: 23px;
+  line-height: 22.5px;
   letter-spacing: 0.02em;
   text-align: center;
   position: relative;
@@ -29,6 +34,16 @@
 .btn:hover {
   color: #292F36;
   background-color: #fff;
+}
+.btn__color {
+  background-color: #CDA274;
+  border-color: #CDA274;
+}
+.btn__color:after {
+  content: url("../icon/rightBlack.png");
+}
+.btn__color:hover {
+  color: #CDA274;
 }
 
 /*# sourceMappingURL=style.css.map */
