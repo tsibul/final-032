@@ -1,2 +1,44 @@
 @import "vars";
 @import "mixins";
+
+.banner {
+  margin-top: 57px;
+  height: 758px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+
+  &__subcontent {
+    position: absolute;
+    padding-left: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    width: 506px;
+
+    &_title {
+      @include title();
+      padding-top: 8px;
+      font-size: 65px;
+      line-height: 81.25px;
+
+      &_text {
+        @include text();
+        font-size: 22px;
+        line-height: 33px;
+      }
+    }
+
+  }
+}
+
+.banner-image {
+  border: 2px solid transparent;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
