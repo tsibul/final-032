@@ -25,8 +25,8 @@
 <!--1. Создать кнопку "Перевернуть". При клике на кнопку текст кнопки должен перевернуться и отобразиться в обратном порядке.-->
 <button class="btn" id="revrse" @click="rever">Перевернуть</button>
 <!--2. Есть список элементов. Пользователь может добавлять новые элементы списка с текстом “Новый элемент списка” нажав на кнопку "Добавить".-->
-<ul style="width: 260px; margin: 12px">
-    <li class="btn" id="elem" @click="ddTo">Добавить</li>
+<button class="btn" id="elem" @click="ddTo">Добавить</button>
+<ul style="width: 260px; margin: 12px" id="ul" @click="delLi($event)">
     <li class="btn btn__color">Один</li>
     <li class="btn btn__color">Два</li>
     <li class="btn btn__color">Три</li>

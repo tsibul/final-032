@@ -18,12 +18,17 @@ const fncs = new Vue({
             const li = document.createElement('li');
             li.classList.add('btn', 'btn__color');
             li.textContent = 'Новый элемент';
-            this.$el.closest('ul').appendChild(li);
+            this.$el.nextElementSibling.appendChild(li);
         }
     }
 });
 
 const fff = new Vue({
-
-})
+    el: '#ul',
+    methods: {
+        delLi (element){
+            element.target.remove();
+        }
+    }
+});
 
