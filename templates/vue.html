@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Title</title>
+
+    <script type="module" src="" defer></script>
+    <script src="https://kit.fontawesome.com/e2a5b405b2.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../static/final032/css/style.css">
+
+    <!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+    <!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+    <!--    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+
+</head>
+<body>
+<!--1. Создать кнопку "Перевернуть". При клике на кнопку текст кнопки должен перевернуться и отобразиться в обратном порядке.-->
+<button class="btn" id="revrse" @click="rever">Перевернуть</button>
+<!--2. Есть список элементов. Пользователь может добавлять новые элементы списка с текстом “Новый элемент списка” нажав на кнопку "Добавить".-->
+<ul style="width: 260px; margin: 12px">
+    <li class="btn" id="elem" @click="ddTo">Добавить</li>
+    <li class="btn btn__color">Один</li>
+    <li class="btn btn__color">Два</li>
+    <li class="btn btn__color">Три</li>
+    <li class="btn btn__color">Четыре</li>
+</ul>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="../static/final032/js/scriptForVue.js"></script>
+</body>
+</html>
