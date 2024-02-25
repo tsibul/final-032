@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Hw2</title>
+
+    <script src="https://kit.fontawesome.com/e2a5b405b2.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../static/final032/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+
+    <!--    <script src="../static/final032/js/blog/blog.js" defer type="module"></script>-->
+
+    <style>
+        .product-list {
+            width: 40vw;
+            border-radius: 30px;
+            border: 1px solid #4D5053;
+            margin: 50px 25px;
+        }
+
+        .product-list__row {
+            display: grid;
+            font-weight: 400;
+            grid-template-columns: 2fr 1fr;
+            padding: 12px 24px;
+            gap: 30px;
+        }
+
+        .product-list__row_title {
+            font-weight: 600;
+            background-color: #E7E7E7;
+            border-radius: 30px 30px 0 0;
+            cursor: pointer;
+        }
+
+        .sort:hover {
+            color: #CDA274;
+        }
+
+        .product-list_item {
+            font-family: "Jost", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: inherit;
+            font-style: normal;
+            color: #4D5053;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+<div class="product-list" id="app">
+    <div class="product-list__row product-list__row_title">
+        <div class="product-list_item sort" @click="sortByName($event)">Название</div>
+        <div class="product-list_item sort" @click="sortByPrice($event)">Цена</div>
+    </div>
+    <div class="product-list__row" v-for="car in cars">
+        <div class="product-list_item ">{{car.name}}</div>
+        <div class="product-list_item ">{{car.price}}</div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    const products = [
+        {
+            name: 'BMW',
+            price: 200
+        },
+        {
+            name: 'Audi',
+            price: 20
+        },
+        {
+            name: 'Mercedes',
+            price: 100
+        },
+        {
+            name: 'Subaru',
+            price: 500
+        },
+        {
+            name: 'Opel',
+            price: -2
+        },
+        {
+            name: 'Toyota',
+            price: 150
+        },
+        {
+            name: 'Honda',
+            price: 200
+        }
+    ];
+
+    const app = new Vue({
+        el: '#app',
+        data: {
+            cars: products,
+            ascPrice: true,
+            ascName: true,
+        },
+        methods: {
+            sortByName(e) {
+                if (this.ascName) {
+                    products.sort((a, b) => a.name.localeCompare(b.name));
+                    this.ascName = !this.ascName;
+                    this.ascPrice = true;
+                } else {
+                    products.sort((a, b) => b.name.localeCompare(a.name));
+                    this.ascName = !this.ascName;
+                    this.ascPrice = true;
+                }
+                e.target.style.color = '#CDA274'
+                e.target.nextElementSibling.style.color = '#4D5053'
+            },
+            sortByPrice(e) {
+                if (this.ascPrice) {
+                    products.sort((a, b) => a.price - b.price);
+                    this.ascPrice = !this.ascPrice;
+                    this.ascName = true;
+                } else {
+                    products.sort((a, b) => b.price - a.price);
+                    this.ascPrice = !this.ascPrice;
+                    this.ascName = true;
+                }
+                e.target.style.color = '#CDA274'
+                e.target.previousElementSibling.style.color = '#4D5053'
+            }
+
+        }
+    });
+</script>
+</body>
+</html>
