@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Title</title>
+
+    <script type="module" src="" defer></script>
+    <script src="https://kit.fontawesome.com/e2a5b405b2.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../static/final032/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js" defer></script>
+    <script src="../static/final032/js/blog/blog.js" defer type="module"></script>
+
+</head>
+<body>
+<div class="container">
+    <header class="menu" id="header" v-html="headerContent"></header>
+</div>
+<section class="blog-header">
+    <div class="blog-header__intro">
+        <div class="projects__top_title">Articles & News</div>
+        <div class="projects__top_text">Home / Blog</div>
+    </div>
+</section>
+<div class="container">
+    <section class="latest-post">
+        <div class="latest-post__title">Latest Post</div>
+        <div class="latest-post__content">
+            <img src="../static/final032/image/lastPost.jpg" class="latest-post__content_img">
+            <div class="latest-post__content_info">
+                <div class="latest-post__content_title">Low Cost Latest Invented Interior Designing Ideas</div>
+                <div class="latest-post__content_text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
+                    turpis dignissim maximus.posuere in.Contrary to popular belief.
+                </div>
+                <div class="latest-post__content_text">Lorem Ipsum is not simply random text. It has roots in a piece of
+                    classic.
+                </div>
+                <div class="latest-post__content_bottom">
+                    <div class="news__articles_text">26 December,2022</div>
+                    <img src="../static/final032/icon/next.svg" class="news__articles_svg" alt="right">
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <section class="news">
+        <div class="projects__top_title projects__top_title_blog">Articles & News</div>
+        <div class="news__articles">
+            <article class="news__articles_item">
+                <img src="../static/final032/image/kitchenDesign.jpg" class="news__articles_img">
+                <div class="news__articles_tag">Kitchen Design</div>
+                <div class="news__articles_title">Let’s Get Solution For Building Construction Work</div>
+                <div class="news__articles_bottom">
+                    <div class="news__articles_text">26 December,2022</div>
+                    <img src="../static/final032/icon/next.svg" class="news__articles_svg" alt="right">
+                </div>
+            </article>
+            <article class="news__articles_item news__articles_dark-bg">
+                <img src="../static/final032/image/livingDesign.jpg" class="news__articles_img">
+                <div class="news__articles_title">Low Cost Latest Invented Interior Designing
+                    Ideas.
+                </div>
+                <div class="news__articles_bottom">
+                    <div class="news__articles_text">22 December,2022</div>
+                    <img src="../static/final032/icon/nextLight.svg" class="news__articles_svg" alt="right">
+                </div>
+            </article>
+            <article class="news__articles_item">
+                <img src="../static/final032/image/interiorDesign.jpg" class="news__articles_img">
+                <div class="news__articles_title">Best For Any Office & Business Interior
+                    Solution
+                </div>
+                <div class="news__articles_bottom">
+                    <div class="news__articles_text">25 December,2022</div>
+                    <img src="../static/final032/icon/next.svg" class="news__articles_svg" alt="right">
+                </div>
+            </article>
+        </div>
+
+    </section>
+    <footer class="footer" id="footer" v-html="footerContent"></footer>
+
+</div>
+
+
+</body>
+</html>
