@@ -392,11 +392,14 @@
   left: 44px;
   top: 252px;
 }
-.news__footer {
+.news__articles_footer {
   display: flex;
-  justify-content: space-between;
-  width: 268px;
+  justify-content: center;
   margin-top: 52px;
+  width: 100%;
+}
+.news_blog {
+  margin-bottom: 200px;
 }
 
 .blog-header {

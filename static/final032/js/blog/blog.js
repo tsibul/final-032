@@ -2,6 +2,9 @@
 
 import {headerHTML} from "../main/header.js";
 import {footerHTML} from "../main/footer.js";
+import {articleList} from "./articles.js";
+
+
 
 const headerApp = new Vue({
     el: '#header',
@@ -15,4 +18,11 @@ const footerApp = new Vue({
     data: {
         footerContent: footerHTML
     },
+});
+
+const newsApp = new Vue({
+    el: '#newsApp',
+    data: {
+        articles: articleList,
+    }
 });
