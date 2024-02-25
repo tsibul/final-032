@@ -1,0 +1,151 @@
+@import 'vars';
+@import "mixins";
+
+.details-first {
+  max-width: 2500px;
+  margin: 0 auto;
+  margin-top: 45px;
+  width: 100%;
+  height: 351px;
+  background-image: url("../image/blogDetailBanner.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  //display: flex;
+  //justify-content: center;
+  //align-items: end;
+}
+
+.details-layout {
+  margin-top: 200px;
+  display: grid;
+  grid-template-columns: 804px 345px;
+  justify-content: space-between;
+}
+
+.details-right {
+  margin-top: 24px;
+  grid-template-columns: 320px;
+  max-height: 2380px;
+  overflow: auto;
+  justify-content: start;
+  //padding-right: 200px;
+
+  &__item {
+    height: 460px;
+  }
+
+  &__tag {
+    top: 198px;
+  }
+}
+
+.current-post {
+  &__title {
+    @include title;
+    font-size: 50px;
+    line-height: 62.5px;
+  }
+
+  &__text {
+    margin-top: 36px;
+    @include text;
+    font-size: 22px;
+    line-height: 33px;
+  }
+
+  &__details {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 36px;
+  }
+
+  &__banner {
+    margin: 24px 0;
+    height: 287px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F4F0EC;
+    border-radius: 70px;
+    justify-content: center;
+
+    &_it {
+      margin-top: 10px;
+      @include title;
+      font-size: 25px;
+      font-style: italic;
+      width: 345px;
+      color: $colorPrimary;
+      text-align: center;
+    }
+  }
+
+  &__small {
+    @include text;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__img1 {
+    margin: 16px 0 24px 0;
+    border-radius: 70px;
+    width: 100%;
+  }
+
+  &__img2 {
+    margin: 24px 0 0 0;
+    border-radius: 70px;
+    width: 100%;
+  }
+}
+
+.details-tags {
+  &__title {
+    @include title;
+    font-size: 25px;
+    line-height: 31.25px;
+  }
+
+  &__btns {
+    margin-top: 24px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    &_check {
+      position: absolute;
+      left: -999px;
+
+      &:checked + label {
+        color: #fff;
+        background-color: $colorSecondary;
+      }
+    }
+  }
+}
+
+.tags-btn {
+  //margin-top: 40px;
+  padding: 9px 30px;
+  background-color: #F4F0EC;
+  color: $colorSecondary;
+  @include text;
+  font-size: 18px;
+  line-height: 22.5px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: background-color 0.2s, color 0.2s;
+
+
+  &:hover {
+    color: #fff;
+    background-color: $colorSecondary;
+  }
+
+}
+
+.tags-span{
+  padding: 12px 0;
+}

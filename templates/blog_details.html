@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Title</title>
+
+    <script src="https://kit.fontawesome.com/e2a5b405b2.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../static/final032/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js" defer></script>
+    <script src="../static/final032/js/blog/blogDetails.js" defer type="module"></script>
+
+</head>
+<body>
+<div class="container">
+    <header class="menu" id="header" v-html="headerContent"></header>
+</div>
+<section class="details-first"></section>
+<div class="container">
+    <div class="details-layout" id="newsApp">
+        <section class="current-post">
+            <div class="current-post__title">{{currentArticle.title}}</div>
+            <img :src="currentArticle.url" alt="pict1" class="current-post__img1">
+            <div class="current-post__details">
+                <div class="current-post__small">{{currentArticle.date}}</div>
+                <div class="current-post__small">Interior&nbsp;/&nbsp;Home&nbsp;/&nbsp;{{currentArticle.tag}}</div>
+            </div>
+            <div class="current-post__text" v-html="currentArticle.summary"></div>
+            <div class="current-post__banner">
+                <img src="../static/final032/image/kocki.png">
+                <div class="current-post__banner_it">The details are not the details.
+                    They make the design.</div>
+            </div>
+            <div class="current-post__title">{{currentArticle.contentTitle}}</div>
+            <div class="current-post__text">{{currentArticle.contentIntro}}</div>
+            <div class="current-post__text" v-for="content in currentArticle.content">{{content}}</div>
+            <img :src="currentArticle.url2" alt="pict2" class="current-post__img2">
+            <div class="current-post__text">{{currentArticle.conclusion}}</div>
+
+
+        </section>
+        <section class="details_blog">
+            <div class="details-tags">
+                <div class="details-tags__title">Tags</div>
+                <div class="details-tags__btns">
+                    <span class="tags-span" @click="showAll">
+                    <input type="radio" name="tags" checked id="tags-all" class="details-tags__btns_check">
+                    <label for="tags-all"  class="tags-btn" >All</label>
+                    </span>
+                    <span v-for="tag in tags" class="tags-span" @click="showByTag(tag)">
+                    <input type="radio" name="tags"  :id="'tags-'+ tag.replace(' ', '_')" class="details-tags__btns_check">
+                    <label :for="'tags-'+ tag.replace(' ', '_')" class="tags-btn">{{tag}}</label>
+                    </span>
+                </div>
+            </div>
+            <div class="news__articles details-right">
+                <article class="news__articles_item details-right__item" v-for="article in articles"
+                         :class="{'news__articles_dark-bg':!article.bgLight}">
+                    <img :src="article.url" class="news__articles_img">
+                    <div class="news__articles_tag details-right__tag">{{article.tag}}</div>
+                    <div class="news__articles_title">{{currentArticle.title}}</div>
+                    <div class="news__articles_bottom">
+                        <div class="news__articles_text">{{article.date}}</div>
+                        <img v-if="article.bgLight" src="../static/final032/icon/next.svg" class="news__articles_svg"
+                             alt="right">
+                        <img v-else src="../static/final032/icon/nextLight.svg" class="news__articles_svg" alt="right">
+                    </div>
+                </article>
+            </div>
+
+        </section>
+    </div>
+    <footer class="footer" id="footer" v-html="footerContent"></footer>
+
+</div>
+
+
+</body>
+</html>

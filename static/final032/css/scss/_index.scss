@@ -182,7 +182,10 @@
     &_img {
       border: 1px solid transparent;
       border-radius: 55px 55px 0 0;
-      height: 289px;
+      //height: 289px;
+      //object-fit: fill;
+      width: 100%;
+      aspect-ratio: 34 / 29;
     }
 
     &_title {
